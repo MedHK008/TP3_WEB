@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            width: 500px;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            box-shadow: 10px 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div><h1>Menu Principal</h1></div>
+    <div><button id="EX1">Afficher la page 1</button></div>
+    <div><button id="EX2">Afficher la page 2</button></div>
+    <div><button id="EX4">Afficher la page 3</button></div>    
+    <script>
+        document.getElementById('EX1').addEventListener('click', function() {
+            window.location.href = 'EX1/index.html';
+        });
+        document.getElementById('EX2').addEventListener('click', function() {
+            window.location.href = 'EX2/index.html';
+        });
+        document.getElementById('EX4').addEventListener('click', function() {
+            window.location.href = 'EX4/index.html';
+        });
+        </script>
+</body>
+</html>

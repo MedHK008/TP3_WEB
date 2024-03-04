@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="styling.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulaire">
+        <form>
+            <table>
+                <tr>
+                    <td><label for="code">Code</label></td>
+                    <td><input id="code" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="nom">Nom</label></td>
+                    <td><input type="text" id="nom" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td><input type="number" id="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="salaire">Salaire</label></td>
+                    <td><input type="number" id="salaire" required></td>
+                </tr>
+                <tr>
+                    <td><label for="taux">Taux d'augmentation</label></td>
+                    <td><input type="number" id="taux" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="Nsalaire">Nouveau salaire</label></td>
+                    <td><input type="number" id="Nsalaire" disabled></td>
+                </tr>
+                <tr>
+                    <td><input id="calcule" type="button" value="OK"></td>
+                    <td><input id="delete" type="button" value="Delete"></td>
+                </tr>
+            </table>
+        </form>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            event.preventDefault();
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function(event) {
+            var code = form.querySelector('input[type="password"]').value;
+            var nom = form.querySelector('input[type="text"]').value;
+            var age = parseInt(form.querySelector('input[type="number"]').value);
+            var salaire = parseFloat(form.querySelectorAll('input[type="number"]')[1].value);
+            var tauxInput = parseFloat(form.querySelectorAll('input[type="number"]')[2]);
+            var nouveauSalaireInput = form.querySelectorAll('input[type="number"]')[3];
+            console.log(code, salaire, age, nom);
+            if (age < 5) {
+                tauxInput.value= 0;
+            } else if (age >= 5 && age < 10) {
+                tauxInput.value= 2.5;
+            } else {
+                tauxInput.value= 4;
+            }
+            nouveauSalaireInput.value = salaire + (tauxInput.value) * salaire / 100;
+        });
+});
+
+    </script>
+</body>
+</html>

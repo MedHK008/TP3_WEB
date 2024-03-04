@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <table >
+                <tr id="header">
+                    <td colspan="2">ONCF</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="iprice">Prix du ticket</label>
+                    </td>
+                    <td>
+                        <input type="number" id="iprice" name="iprice" placeholder="Prix du ticket">
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="age">Tranche d'âge</label>
+                    </td>
+                    <td>
+                        <select id="age">
+                            <option value="0">---------------</option>
+                            <option value="1">inférieur à 5 ans</option>
+                            <option value="2">Entre 5 et 18 ans</option>
+                            <option value="3">supérieur à 18 ans</option>
+                        </select>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="fprice">Prix à payer</label>
+                    </td>
+                    <td>
+                        <input type="number" id="fprice" name="fprice" placeholder="Prix à payer">
+                    </td>
+                </tr>    
+                <tr>
+                    <td colspan="2">
+                        <input id="submit"type="submit" value="OK">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>  
+</body>
+</html>

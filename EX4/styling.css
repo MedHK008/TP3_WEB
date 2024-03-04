@@ -1,0 +1,78 @@
+/* Définir les couleurs de base pour le thème sombre */
+:root {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --input-background-color: #333333;
+    --input-border-color: #555555;
+    --button-background-color: #1E88E5;
+    --button-text-color: #ffffff;
+}
+body{
+    background-color:#333333;
+    color: var(--text-color);
+}
+/* Appliquer le style général du thème sombre */
+div {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    padding: 10px 0px;
+    margin-top :20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 2200px;
+    margin: 45px  auto;
+
+}
+
+/* Styles pour les inputs */
+input[type="number"] {
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+    border: 1px solid var(--input-border-color);
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+/* Styles pour les boutons */
+input[type="submit"] {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 100%;
+    margin-right: 40px;
+}
+
+input[type="submit"]:hover {
+    background-color: darken(var(--button-background-color), 10%);
+}
+
+/* Styles pour la table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 8px;
+    width: 400px;
+}
+
+/* Styles spécifiques pour ajuster l'espace autour du bloc des boutons */
+#bt {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+}
